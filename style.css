@@ -5,12 +5,17 @@
 body {
     background-color: #e3e3e3;
 }
+div {
+    margin: 20px;
+}
+input {
+    font-size: 20px;
+}
 button {
     background-color: blueviolet;
-    padding: 20px 40px;
-    margin: 50px;
+    padding: 10px 20px;
     color: white;
-    font-size:25px;
+    font-size:18px;
     border-radius: 25px;
     user-select: none;
     border: none;
@@ -21,4 +26,7 @@ button:hover {
 }
 button:active {
     transform:translateY(2px);
+}
+#sonuc {
+    font-size: 30px;
 }

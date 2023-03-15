@@ -8,28 +8,42 @@
         />
     </head>
     <body>
-        <button onclick="topla()">+</button>
-        <button onclick="cikar()">-</button>
-        <button onclick="carp()">*</button>
-        <button onclick="bol()">/</button>
-        <button onclick="mod()">%</button>
+        <div>
+            <input id="sayi1" type="number"/>
+            <input id="sayi2" type="number"/>
+        </div>
+        <div>
+            <button onclick="hesapla('+')">+</button>
+            <button onclick="hesapla('-')">-</button>
+            <button onclick="hesapla('*')">*</button>
+            <button onclick="hesapla('/')">/</button>
+            <button onclick="hesapla('%')">%</button>
+        </div>
+        <div id="sonuc"></div>
         <script>
-            var x=10;
-            var y=5;
-            function topla() {
-                alert(x+y);
-            }
-            function cikar() {
-                alert(x-y);
-            }
-            function carp() {
-                alert(x*y);
-            }
-            function bol() {
-                alert(x/y);
-            }
-            function mod() {
-                alert(x%y);
+            var sayi1=document.getElementById("sayi1");
+            var sayi2=document.getElementById("sayi2");
+            var sonuc=document.getElementById("sonuc");
+            function hesapla(type){
+                var sonucText="";
+                switch (type) {
+                    case '+':
+                        sonucText=Number(sayi1.value)+Number(sayi2.value);
+                        break;
+                    case '-':
+                        sonucText=Number(sayi1.value)-Number(sayi2.value);
+                        break;
+                    case '*':
+                        sonucText=Number(sayi1.value)*Number(sayi2.value);
+                        break;
+                    case '/':
+                        sonucText=Number(sayi1.value)/Number(sayi2.value);
+                        break;
+                    case '%':
+                        sonucText=Number(sayi1.value)%Number(sayi2.value);
+                        break;
+                }
+                sonuc.innerHTML=sonucText;
             }
         </script>
     </body>
